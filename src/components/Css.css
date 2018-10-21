@@ -1,0 +1,5 @@
+.userimg {
+  -webkit-box-shadow: -2px 11px 94px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 11px 94px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 11px 94px -10px rgba(0, 0, 0, 0.75);
+}
