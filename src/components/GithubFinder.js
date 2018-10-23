@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Css.css";
+import { Link } from "react-router-dom";
 
 class GithubFinder extends Component {
   state = {
@@ -70,8 +71,13 @@ class GithubFinder extends Component {
                     <span className="text-dark">{this.state.data.bio}</span>
                   </p>
                   <div className="d-flex align-items-center justify-content-center">
-                    <p className="text-light rounded mr-2 p-2 bg-primary">
-                      Repo: {this.state.data.public_repos}
+                    <p>
+                      <Link
+                        to={`/repo/${this.state.data.login}`}
+                        className="d-block text-light rounded mr-2 p-2 bg-primary"
+                      >
+                        Repo: {this.state.data.public_repos}
+                      </Link>
                     </p>
                     <p className="text-light rounded mr-2 p-2 bg-info">
                       Gist: {this.state.data.public_gists}
